@@ -2,14 +2,15 @@
   "name": "@umituz/react-native-clipboard",
   "version": "1.0.0",
   "description": "Clipboard copy/paste functionality for React Native using expo-clipboard",
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "typecheck": "tsc --noEmit",
     "lint": "tsc --noEmit",
     "clean": "rm -rf lib",
     "prebuild": "npm run clean",
+    "prepublishOnly": "npm run build",
     "version:patch": "npm version patch -m 'chore: release v%s'",
     "version:minor": "npm version minor -m 'chore: release v%s'",
     "version:major": "npm version major -m 'chore: release v%s'"
@@ -21,7 +22,7 @@
     "paste",
     "expo-clipboard"
   ],
-  "author": "\u00dcmit UZ <umit@umituz.com>",
+  "author": "Ümit UZ <umit@umituz.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -44,8 +45,10 @@
     "access": "public"
   },
   "files": [
+    "lib",
     "src",
     "README.md",
     "LICENSE"
   ]
 }
+
